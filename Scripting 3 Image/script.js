@@ -8,7 +8,6 @@ ctx.fillRect(0, 0, 1600, 1600);
 ctx.fill();
 
 // Top Section (Circles)
-// TODO Split circles into 4 different colours
 drawSemiCircles("red", 160, 175, 80, Math.PI, 0);
 drawSemiCircles("orange", 160, 175, 80, 0, Math.PI);
 drawRect("orange", 137.5, 175, 205, 50)
@@ -36,6 +35,7 @@ function drawRect(colour, x, y, w, h) {
 }
 
 function drawTrap(colour, x, y, w, h, x2) {
+    // Draws a trapezium
     ctx.beginPath();
     ctx.fillStyle = colour;
     ctx.rect(x, y, w, h);
