@@ -1,31 +1,34 @@
 let canvas = document.getElementById("myCanvas");
 let ctx = canvas.getContext("2d");
 
-// BG
-ctx.beginPath();
-ctx.fillStyle = "gray";
-ctx.fillRect(0, 0, 1600, 1600);
-ctx.fill();
+drawHeart('red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet', '#5D3A2F', 'beige')
 
-// Top Section (Circles)
-drawSemiCircles("red", 160, 175, 80, Math.PI, 0);
-drawSemiCircles("orange", 160, 175, 80, 0, Math.PI);
-drawRect("orange", 137.5, 175, 205, 50)
-drawTrap("yellow", 137.5, 225, 205, 50, 40)
-drawRect("yellow", 175, 225, 130, 50);
+function drawHeart(clr1, clr2, clr3, clr4, clr5, clr6, clr7, clr8, bg) {
+    // BG
+    ctx.beginPath();
+    ctx.fillStyle = bg;
+    ctx.fillRect(0, 0, 485, 700);
+    ctx.fill();
+    
+    // Top Section (Circles)
+    drawSemiCircles(clr1, 160, 175, 80, Math.PI, 0);
+    drawSemiCircles(clr2, 160, 175, 80, 0, Math.PI);
+    drawRect(clr2, 137.5, 175, 205, 50)
+    drawTrap(clr3, 137.5, 225, 205, 50, 40)
+    drawRect(clr3, 175, 225, 130, 50);
 
-// Bottom Section (Multi-Colour Triangle)
-// TODO Work out edge smoothing mathematically
-drawTrap("green", 172.5, 275, 135, 50, 35);
-drawTrap("blue", 195, 325, 90, 50, 23);
-drawTrap("indigo", 217.5, 375, 45, 50, 22);
-drawTrap("violet", 239.5, 425, 1, 50, 22);
+    // Bottom Section (Multi-Colour Triangle)
+    drawTrap(clr4, 172.5, 275, 135, 50, 35);
+    drawTrap(clr5, 195, 325, 90, 50, 23);
+    drawTrap(clr6, 217.5, 375, 45, 50, 22);
+    drawTrap(clr7, 239.5, 425, 1, 50, 22);
 
-// Dot
-ctx.beginPath();
-ctx.fillStyle = "#5D3A2F";
-ctx.arc(240, 550, 50, 0, Math.PI * 2);
-ctx.fill();
+    // Dot
+    ctx.beginPath();
+    ctx.fillStyle = clr8;
+    ctx.arc(240, 550, 50, 0, Math.PI * 2);
+    ctx.fill();
+}
 
 function drawRect(colour, x, y, w, h) {
     ctx.beginPath();
