@@ -1,20 +1,69 @@
-<h1>Pride Hearts <3</h1>
-<p>General:
-<button type = "button" onclick = "drawHeart('red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet', '#5D3A2F', 'beige')">Rainbow</button>
-</p><p>Sexual orientations:
-<button type = "button" onclick = "drawHeart('red', '#FF6F00', 'orange', 'white', '#F06292', '#B74B6F', '#D41B5A', '#D41B5A', 'pink')">Lesbian</button>
-<button type = "button" onclick = "drawHeart('#05846b', '#25c5a6', '#91dabd', 'white', '#75a7df', '#4d45c7', '#3c1874', '#3c1874', 'pink')">Gay</button>
-<button type = "button" onclick = "drawHeart('#cc0066', '#cc0066', '#993399', '#993399', '#003399', '#003399', '#003399', '#003399', 'pink')">Bi</button>
-<button type = "button" onclick = "drawHeart('#ff218c', '#ff218c', 'yellow', 'yellow', '#21b1ff', '#21b1ff', '#21b1ff', '#21b1ff', 'pink')">Pan</button>
-</p><p>Gender orientations:
-<button type = "button" onclick = "drawHeart('#5ccefa', '#5ccefa', '#f4a9b7', 'white', '#f4a9b7', '#5ccefa', '#5ccefa', '#5ccefa', '#66BB6A')">Trans</button>
-<button type = "button" onclick = "drawHeart('yellow', 'yellow', 'white', 'white', 'purple', 'purple', 'black', 'black', '#66BB6A')">Enby</button>
-</p><p>Nature of attraction:
-<button type = "button" onclick = "drawHeart('black', 'black', 'gray', 'gray', 'white', 'white', 'purple', 'purple', 'beige')">Ace</button>
-<button type = "button" onclick = "drawHeart('#3ca542', '#3ca542', '#a7d379', 'white', 'gray', 'black', 'black', 'black', 'beige')">Aro</button>
-<button type = "button" onclick = "drawHeart('#e38c01', '#e38c01', '#eccd00', 'white', '#62afde', '#1e3957', '#1e3957', '#1e3957', 'beige')">Aroace</button>
-</p><p><br>
-<button type = "button" onclick = "drawHeart('white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white')">Clear</button>
-</p>
+<link rel="stylesheet" type="text/css" href="style.css">
+<div class = "buttons">
+    <h1>Pride Heart Picker</h1>
+    <p>Each heart represents a flag for an identity within the queer community.</p>
+    <p>General:
+    <button type = "button" onclick = "drawHeart('red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet', '#5D3A2F', 'beige'); toggleInfo('rainbow')">Rainbow</button>
+    </p><p>Sexual orientations:
+    <button type = "button" onclick = "drawHeart('red', '#FF6F00', 'orange', 'white', '#F06292', '#B74B6F', '#D41B5A', '#D41B5A', 'pink'); toggleInfo('lesbian');">Lesbian</button>
+    <button type = "button" onclick = "drawHeart('#05846b', '#25c5a6', '#91dabd', 'white', '#75a7df', '#4d45c7', '#3c1874', '#3c1874', 'pink'); toggleInfo('gay')">Gay</button>
+    <button type = "button" onclick = "drawHeart('#cc0066', '#cc0066', '#993399', '#993399', '#003399', '#003399', '#003399', '#003399', 'pink'); toggleInfo('bi')">Bi</button>
+    <button type = "button" onclick = "drawHeart('#ff218c', '#ff218c', 'yellow', 'yellow', '#21b1ff', '#21b1ff', '#21b1ff', '#21b1ff', 'pink'); toggleInfo('pan')">Pan</button>
+    </p><p>Gender orientations:
+    <button type = "button" onclick = "drawHeart('#5ccefa', '#5ccefa', '#f4a9b7', 'white', '#f4a9b7', '#5ccefa', '#5ccefa', '#5ccefa', '#66BB6A'); toggleInfo('trans')">Trans</button>
+    <button type = "button" onclick = "drawHeart('yellow', 'yellow', 'white', 'white', 'purple', 'purple', 'black', 'black', '#66BB6A'); toggleInfo('enby')">Enby</button>
+    </p><p>Nature of attraction:
+    <button type = "button" onclick = "drawHeart('black', 'black', 'gray', 'gray', 'white', 'white', 'purple', 'purple', 'beige'); toggleInfo('ace')">Ace</button>
+    <button type = "button" onclick = "drawHeart('#3ca542', '#3ca542', '#a7d379', 'white', 'gray', 'black', 'black', 'black', 'beige'); toggleInfo('aro')">Aro</button>
+    <button type = "button" onclick = "drawHeart('#e38c01', '#e38c01', '#eccd00', 'white', '#62afde', '#1e3957', '#1e3957', '#1e3957', 'beige'); toggleInfo('aroace')">Aroace</button>
+    </p><p><br>
+    <button type = "button" onclick = "drawHeart('white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white'); toggleInfo()">Clear</button>
+    </p>
+</div>
+
+<div class = "info" id = "rainbow">
+    <h1>LGBTQ+ (Queer)</h1>
+    <p>Lesbian, Gay, Bisexual, Trans, Queer, and more. This refers to a community of people who fall outside the societal expectations for sexual and romantic orientation and gender identity.<br><br>Queer people have a long history of discrimination and misunderstanding that still continues to this day, with many African and middle eastern countries still incorporating a death sentence for those who identify with the community.</p>
+</div>
+
+<div class = "info" id = "lesbian">
+    <h1>Lesbian</h1>
+    <p>Someone who is (usually) feminine presenting that is attracted to feminine presenting people.<br><br>People who are not feminine presenting may still identify as lesbian due to specific, personal reasons and circumstance, such as identification with enby gender identities.</p>
+</div>
+<div class = "info" id = "gay">
+    <h1>Gay</h1>
+    <p>Someone who is (usually) masculine presenting that is attracted to masculine presenting people.<br><br>People who are not masculine presenting may still identify as gay due to specific, personal reasons and circumstance, such as identification with enby gender identities.</p>
+</div>
+<div class = "info" id = "bi">
+    <h1>Bisexual</h1>
+    <p>Someone who is attracted to masculine, feminine, and non-binary presenting people.<br><br>Bisexual people are usually attracted to specific traits of different genders.</p>
+</div>
+<div class = "info" id = "pan">
+    <h1>Pansexual</h1>
+    <p>Someone who is attracted to everyone, regardless of gender.<br><br>Pansexual people do not usually care for specific gendered traits, but rather are attracted to the people themselves.</p>
+</div>
+
+<div class = "info" id = "trans">
+    <h1>Transgender</h1>
+    <p>Someone who identifies as a gender that does not correlate with their biological sex.<br><br>Trans people experience a type of dysphoria towards their sex that can be overcome by socially transitioning and then receiving gender-affirming care such as HRT.</p>
+</div>
+<div class = "info" id = "enby">
+    <h1>Non-binary (NB/enby)</h1>
+    <p>Someone who identifies with a gender that falls outside the binary of masculine or feminine, but not necessarily excluding either.<br><br>Some enby people may feel dysphoria towards their body, whereas others are more apathetic. Most enby people will present themselves ambiguously, but not all do. Some have a fluid gender, that can change from day to day. It's a very large spectrum.</p>
+</div>
+
+<div class = "info" id = "ace">
+    <h1>Asexual</h1>
+    <p>Someone who experiences a lack of sexual attraction that is unrelated to libido.<br><br>This may manifest through sex-repulsion, where the individual is repulsed by the idea of sex, however many asexuals do have sex despite the fact that they do not feel the need to seek it out. Some asexuals are attracted to the idea of sex, but do not wish to experience it themselves.</p>
+</div>
+<div class = "info" id = "aro">
+    <h1>Aromantic</h1>
+    <p>Someone who experiences a lack of romantic attraction.<br><br>This is one of the most misunderstood identities. Romantic and sexual attraction are often conflated, however they are vastly different. Sexual attraction specifically refers to sex, whereas romantic attraction specifically refers to all non-sex related attractions in a relationship. This can include holding hands, kissing, hugging, etc. Some have a repulsion to romantic activities, whereas others are apathetic. It's a very wide spectrum.</p>
+</div>
+<div class = "info" id = "aroace">
+    <h1>Aroace</h1>
+    <p>Someone who is both aromantic and asexual, often to varying degrees.<br><br>Aroace people may still seek out intimate platonic relationships, known as queer-platonic relationships, in place of sexual/romantic ones.</p>
+</div>
+
 <canvas id = "myCanvas" width = "485" height = "700"></canvas>
 <script src = "script.js"></script>

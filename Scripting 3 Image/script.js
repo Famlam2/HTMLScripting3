@@ -1,7 +1,9 @@
 let canvas = document.getElementById("myCanvas");
 let ctx = canvas.getContext("2d");
 
-drawHeart('red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet', '#5D3A2F', 'beige')
+centerCanvas();
+drawHeart('red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet', '#5D3A2F', 'beige');
+toggleInfo('rainbow');
 
 function drawHeart(clr1, clr2, clr3, clr4, clr5, clr6, clr7, clr8, bg) {
     // BG
@@ -65,6 +67,25 @@ function drawSemiCircles(colour, x, y, r, sr, er) {
     ctx.fill();
 }
 
+function toggleInfo(s) {
+    document.getElementById("rainbow").style.display = "none";
+    document.getElementById("lesbian").style.display = "none";
+    document.getElementById("gay").style.display = "none";
+    document.getElementById("bi").style.display = "none";
+    document.getElementById("pan").style.display = "none";
+    document.getElementById("trans").style.display = "none";
+    document.getElementById("enby").style.display = "none";
+    document.getElementById("ace").style.display = "none";
+    document.getElementById("aro").style.display = "none";
+    document.getElementById("aroace").style.display = "none";
+    document.getElementById(s).style.display = "grid";
+}
+
+function centerCanvas() {
+    canvas.style.left = (window.innerWidth - canvas.width) / 5 + "px";
+    canvas.style.top = (window.innerHeight - canvas.height) / 40 + "px";
+}
+
 // Hidden Button
 function getMousePos(canvas, event) {
     let rect = canvas.getBoundingClientRect();
@@ -86,7 +107,7 @@ function isInBounds(pos, rect) {
 }
 
 canvas.addEventListener("click", function(evt) {
-    var mousePos = getMousePos(canvas, evt);
+    let mousePos = getMousePos(canvas, evt);
     if (isInBounds(mousePos, rect)) {
         alert("boop <3");
     }

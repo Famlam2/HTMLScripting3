@@ -1,6 +1,61 @@
-/* TODO Figure out how to make heart stylesheets */
+canvas {
+    border: 2px solid black;
+    position: absolute;
+}
+
+.buttons {
+    display: grid;
+    background-color: beige;
+    width: 12%;
+}
+
+.info {
+    display: grid;
+    background-color: beige;
+    align-self: center;
+    width: 12%;
+}
 
 #rainbow {
-    --clr1: "red";
-    --clr2: "orange";
+    display: none;
+    background-color: pink;
+}
+
+#lesbian {
+    display: none;
+    background-color: lightpink;
+}
+#gay {
+    display: none;
+    background-color: deepskyblue;
+}
+#bi {
+    display: none;
+    background-color: mediumpurple;
+}
+#pan {
+    display: none;
+    background-color: yellow;
+}
+
+#trans {
+    display: none;
+    background-color: palegreen;
+}
+#enby {
+    display: none;
+    background-color: purple;
+}
+
+#ace {
+    display: none;
+    background-color: gray;
+}
+#aro {
+    display: none;
+    background-color: darkseagreen;
+}
+#aroace {
+    display: none;
+    background-color: orange;
 }
