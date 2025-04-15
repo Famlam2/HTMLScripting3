@@ -1,9 +1,18 @@
 let canvas = document.getElementById("myCanvas");
 let ctx = canvas.getContext("2d");
 
-centerCanvas();
-drawHeart('red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet', '#5D3A2F', 'beige');
-toggleInfo('rainbow');
+positionCanvas();
+canvas.style.opacity = "1";
+changeHeart("red", "orange", "yellow", "green", "blue", "indigo", "violet", "#5D3A2F", "beige");
+toggleInfo("rainbow");
+
+function changeHeart(clr1, clr2, clr3, clr4, clr5, clr6, clr7, clr8, bg) {
+    canvas.style.opacity = "0";
+    setTimeout(function () {
+        canvas.style.opacity = "1";
+        drawHeart(clr1, clr2, clr3, clr4, clr5, clr6, clr7, clr8, bg);
+    }, 200);
+}
 
 function drawHeart(clr1, clr2, clr3, clr4, clr5, clr6, clr7, clr8, bg) {
     // BG
@@ -11,7 +20,7 @@ function drawHeart(clr1, clr2, clr3, clr4, clr5, clr6, clr7, clr8, bg) {
     ctx.fillStyle = bg;
     ctx.fillRect(0, 0, 485, 700);
     ctx.fill();
-    
+
     // Top Section (Circles)
     drawSemiCircles(clr1, 160, 175, 80, Math.PI, 0);
     drawSemiCircles(clr2, 160, 175, 80, 0, Math.PI);
@@ -20,8 +29,8 @@ function drawHeart(clr1, clr2, clr3, clr4, clr5, clr6, clr7, clr8, bg) {
     drawRect(clr3, 175, 225, 130, 50);
 
     // Bottom Section (Multi-Colour Triangle)
-    drawTrap(clr4, 172.5, 275, 135, 50, 35);
-    drawTrap(clr5, 195, 325, 90, 50, 23);
+    drawTrap(clr4, 172, 275, 135.75, 50, 34.75);
+    drawTrap(clr5, 195.5, 325, 89, 50, 23);
     drawTrap(clr6, 217.5, 375, 45, 50, 22);
     drawTrap(clr7, 239.5, 425, 1, 50, 22);
 
@@ -58,6 +67,7 @@ function drawTrap(colour, x, y, w, h, x2) {
 }
 
 function drawSemiCircles(colour, x, y, r, sr, er) {
+    // Draws 2 semicircles next to each other
     ctx.beginPath();
     ctx.fillStyle = colour;
     ctx.arc(x, y, r, sr, er);
@@ -78,15 +88,15 @@ function toggleInfo(s) {
     document.getElementById("ace").style.display = "none";
     document.getElementById("aro").style.display = "none";
     document.getElementById("aroace").style.display = "none";
+    document.getElementById("clear").style.display = "none";
     document.getElementById(s).style.display = "grid";
 }
 
-function centerCanvas() {
-    canvas.style.left = (window.innerWidth - canvas.width) / 5 + "px";
+function positionCanvas() {
     canvas.style.top = (window.innerHeight - canvas.height) / 40 + "px";
 }
 
-// Hidden Button
+// Secret Button
 function getMousePos(canvas, event) {
     let rect = canvas.getBoundingClientRect();
     return {
@@ -113,7 +123,7 @@ canvas.addEventListener("click", function(evt) {
     }
 }, false);
 
-function SurpriseButton(rect, lWidth, fillColor, lineColor) {
+function SurpriseButton(rect) {
     ctx.beginPath();
     ctx.rect(rect.x, rect.y, rect.width, rect.height);
     ctx.fillStyle = "transparent";

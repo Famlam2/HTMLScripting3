@@ -1,21 +1,52 @@
-canvas {
-    border: 2px solid black;
-    position: absolute;
+html, body {
+    background-color: dimgray;
+    font: bold 16px "Times New Roman";
+    
 }
 
-.buttons {
-    display: grid;
+canvas {
+    border: 2px solid black;
+    margin-left: 400px;
+    position: absolute;
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0;
+}
+
+button {
+    background-color: white;
+    border: 1px solid black;
+    font: normal 13px "Times New Roman";
+}
+
+button:hover {
+    background-color: lightgray;
+    transition-duration: 0.1s;
+}
+
+button:active {
+    background-color: gray;
+    transition-duration: 0s;
+}
+
+.picker {
+    display: block;
+    width: 310px;
     background-color: beige;
-    width: 12%;
+    border: 2px solid black;
+    text-align: center;
 }
 
 .info {
-    display: grid;
+    display: block;
+    border: 2px solid black;
+    width: 310px;
     background-color: beige;
+    text-align: center;
     align-self: center;
-    width: 12%;
+    margin-top: 20px;
 }
 
+/* Info Tags */
 #rainbow {
     display: none;
     background-color: pink;
@@ -23,7 +54,7 @@ canvas {
 
 #lesbian {
     display: none;
-    background-color: lightpink;
+    background-color: hotpink;
 }
 #gay {
     display: none;
@@ -40,7 +71,7 @@ canvas {
 
 #trans {
     display: none;
-    background-color: palegreen;
+    background-color: mediumpurple;
 }
 #enby {
     display: none;
@@ -49,7 +80,7 @@ canvas {
 
 #ace {
     display: none;
-    background-color: gray;
+    background-color: rebeccapurple;
 }
 #aro {
     display: none;
@@ -58,4 +89,9 @@ canvas {
 #aroace {
     display: none;
     background-color: orange;
+}
+
+#clear {
+    display: none;
+    background-color: white;
 }
