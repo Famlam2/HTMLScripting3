@@ -1,7 +1,6 @@
 let canvas = document.getElementById("myCanvas");
 let ctx = canvas.getContext("2d");
 
-positionCanvas();
 canvas.style.opacity = "1";
 changeHeart("red", "orange", "yellow", "green", "blue", "indigo", "violet", "#5D3A2F", "beige");
 toggleInfo("rainbow");
@@ -12,7 +11,6 @@ function changeHeart(clr1, clr2, clr3, clr4, clr5, clr6, clr7, clr8, bg) {
         canvas.style.opacity = "1";
         drawHeart(clr1, clr2, clr3, clr4, clr5, clr6, clr7, clr8, bg);
     }, 200);
-    positionCanvas();
 }
 
 function drawHeart(clr1, clr2, clr3, clr4, clr5, clr6, clr7, clr8, bg) {
@@ -91,10 +89,6 @@ function toggleInfo(s) {
     document.getElementById("aroace").style.display = "none";
     document.getElementById("clear").style.display = "none";
     document.getElementById(s).style.display = "grid";
-}
-
-function positionCanvas() {
-    canvas.style.top = (window.innerHeight - canvas.height) / 2 + "px";
 }
 
 // Secret Button
