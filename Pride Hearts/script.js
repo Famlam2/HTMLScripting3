@@ -12,6 +12,7 @@ function changeHeart(clr1, clr2, clr3, clr4, clr5, clr6, clr7, clr8, bg) {
         canvas.style.opacity = "1";
         drawHeart(clr1, clr2, clr3, clr4, clr5, clr6, clr7, clr8, bg);
     }, 200);
+    positionCanvas();
 }
 
 function drawHeart(clr1, clr2, clr3, clr4, clr5, clr6, clr7, clr8, bg) {
@@ -93,7 +94,7 @@ function toggleInfo(s) {
 }
 
 function positionCanvas() {
-    canvas.style.top = (window.innerHeight - canvas.height) / 40 + "px";
+    canvas.style.top = (window.innerHeight - canvas.height) / 2 + "px";
 }
 
 // Secret Button

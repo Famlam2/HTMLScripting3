@@ -6,7 +6,7 @@ html, body {
 
 canvas {
     border: 2px solid black;
-    margin-left: 400px;
+    margin-left: 350px;
     position: absolute;
     transition: opacity 0.2s ease-in-out;
     opacity: 0;
